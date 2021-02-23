@@ -31,10 +31,14 @@ public class numberGuesser {
       }
       guessesLeft--;
     }
+
     if (guessesLeft < 0) {
       System.out.println("You lost! The number was: " + random_num);
+      myScanner.close();
       return;
     }
+
+    myScanner.close();
     System.out.println("You won! You were close enough to the number, " + random_num);
   }
 }
