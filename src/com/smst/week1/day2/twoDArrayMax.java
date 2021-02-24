@@ -6,11 +6,15 @@ import java.util.Random;
 
 public class twoDArrayMax {
   public static void main(String[] args) {
+
     Integer[][] array = make2DArray();
     int max = array[0][0];
     int[] maxCoordinates = new int[2];
+
     for (int i = 0; i < array.length; i++) {
+
       Integer[] row = array[i];
+
       for (int j = 0; j < row.length; j++) {
         max = Math.max(max, row[j]);
       }
@@ -32,11 +36,13 @@ public class twoDArrayMax {
   }
 
   private static Integer[][] make2DArray() {
+
     Integer[][] arr = new Integer[5][2];
+    Random r = new Random();
+    int upperbound = 27;
+
     for (int i = 0; i < 5; i++) {
       for (int j = 0; j < 2; j++) {
-        Random r = new Random();
-        int upperbound = 27;
         int random_num = r.nextInt(upperbound);
         arr[i][j] = random_num;
       }
