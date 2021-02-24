@@ -32,5 +32,6 @@ public class printLnArt {
             System.out.println(" ".repeat(frontSpaces) + "*".repeat(i) + " ".repeat(backSpaces));
             frontSpaces++;
         }
+        myObj.close();
     }
 }
