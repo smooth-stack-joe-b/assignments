@@ -12,9 +12,7 @@ public class twoDArrayMax {
     int[] maxCoordinates = new int[2];
 
     for (int i = 0; i < array.length; i++) {
-
       Integer[] row = array[i];
-
       for (int j = 0; j < row.length; j++) {
         max = Math.max(max, row[j]);
       }
@@ -47,6 +45,7 @@ public class twoDArrayMax {
         arr[i][j] = random_num;
       }
     }
+
     return arr;
   }
 }
