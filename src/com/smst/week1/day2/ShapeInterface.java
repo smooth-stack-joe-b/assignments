@@ -26,9 +26,18 @@ interface IShape {
   void calculateArea(double firstMeasurement, double secondMeasurement);
 
   void displayArea();
+
+  default double round(double value, int places) {
+    if (places < 0)
+      throw new IllegalArgumentException();
+
+    BigDecimal bd = BigDecimal.valueOf(value);
+    bd = bd.setScale(places, RoundingMode.HALF_UP);
+    return bd.doubleValue();
+  }
 }
 
-class Circle extends Rounder implements IShape {
+class Circle implements IShape {
 
   private double area;
 
@@ -45,7 +54,7 @@ class Circle extends Rounder implements IShape {
   }
 }
 
-class Rectangle extends Rounder implements IShape {
+class Rectangle implements IShape {
 
   private double area;
 
@@ -60,7 +69,7 @@ class Rectangle extends Rounder implements IShape {
   }
 }
 
-class Triangle extends Rounder implements IShape {
+class Triangle implements IShape {
 
   private double area;
 
@@ -72,16 +81,5 @@ class Triangle extends Rounder implements IShape {
   @Override
   public void displayArea() {
     System.out.println("area of triangle: " + round(this.area, 2));
-  }
-}
-
-class Rounder {
-  double round(double value, int places) {
-    if (places < 0)
-      throw new IllegalArgumentException();
-
-    BigDecimal bd = BigDecimal.valueOf(value);
-    bd = bd.setScale(places, RoundingMode.HALF_UP);
-    return bd.doubleValue();
   }
 }
