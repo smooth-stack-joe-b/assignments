@@ -11,10 +11,10 @@ import java.util.regex.Pattern;
 
 public class wordCount {
   public static void main(String[] args) throws IOException {
-    List<String> inputLines = makeInputArray("input.txt");
+    List<String> inputLines = makeInputArray("wordCountInput.txt");
     int finalCount = getSearchCount(inputLines);
-    System.out.println("Your word count is: " + finalCount);
 
+    System.out.println("Your word count is: " + finalCount);
   }
 
   public static List<String> makeInputArray(String fileName) throws IOException {
@@ -34,6 +34,7 @@ public class wordCount {
   }
 
   public static int getSearchCount(List<String> textLines) {
+
     System.out.println("What would you like to search for? (any word, case sensitive)");
 
     Scanner input = new Scanner(System.in);
