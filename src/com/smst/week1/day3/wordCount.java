@@ -17,7 +17,7 @@ public class wordCount {
     System.out.println("Your word count is: " + finalCount);
   }
 
-  public static List<String> makeInputArray(String fileName) throws IOException {
+  private static List<String> makeInputArray(String fileName) throws IOException {
 
     List<String> paragraphs = new ArrayList<String>();
 
@@ -33,7 +33,7 @@ public class wordCount {
     return paragraphs;
   }
 
-  public static int getSearchCount(List<String> textLines) {
+  private static int getSearchCount(List<String> textLines) {
 
     System.out.println("What would you like to search for? (any word, case sensitive)");
 
