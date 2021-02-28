@@ -7,5 +7,5 @@
 ## TODO's:
 
 - Make an array of guesses for the numberGuesser
-- Finish the other day 2 problems xD
 - Finish the other day 3 problems...
+- Finish day 4/5 problems
