@@ -50,18 +50,14 @@ public class lambdas {
       return String.join(",", combinedList);
     };
 
-    // printLambda(new String[] { "correctly", "could", "disentangle", "no", "one"
-    // }, lengthFx);
-    // printLambda(new String[] { "correctly", "could", "disentangle", "no", "one"
-    // }, reverseLength);
-    // printLambda(new String[] { "correctly", "could", "disentangle", "no", "one"
-    // }, firstCharOrder);
-    // printLambda(new String[] { "correctly", "could", "disentangle", "no", "one"
-    // }, eFirst);
-    // printLambda(new String[] { "correctly", "could", "disentangle", "no", "one"
-    // }, eFirstCompare);
+    printLambda(new String[] { "correctly", "could", "disentangle", "no", "one" }, lengthFx);
+    printLambda(new String[] { "correctly", "could", "disentangle", "no", "one" }, reverseLength);
+    printLambda(new String[] { "correctly", "could", "disentangle", "no", "one" }, firstCharOrder);
+    printLambda(new String[] { "correctly", "could", "disentangle", "no", "one" }, eFirst);
+    printLambda(new String[] { "correctly", "could", "disentangle", "no", "one" }, eFirstCompare);
 
     printList(Arrays.asList(3, 44), eBeforeInt);
+
   }
 
   private static void printLambda(String[] array, IString fx) {
@@ -75,7 +71,7 @@ public class lambdas {
   }
 
   private static void printStringList(List<String> array, IStringList fx) {
-    String result = fx.stringListLambda(array);
+    String result = Arrays.toString(fx.stringListLambda(array).toArray());
     System.out.println(result);
   }
 
@@ -92,6 +88,6 @@ public class lambdas {
   }
 
   interface IStringList {
-    String stringListLambda(List<String> list);
+    List<String> stringListLambda(List<String> list);
   }
 }
